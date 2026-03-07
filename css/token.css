@@ -1,0 +1,43 @@
+:root {
+    /*colors*/
+  --color-navy: #222831;
+  --color-white: #FFFFFF;
+  --color-navy-light: #272E37;
+  --color-fushia-90: rgba(239, 136, 222, 0.9);
+  --color-gray: #737373;
+  --color-light-gray: #D9D9D9;
+  --color-blue-purple-90: rgba(84, 96, 230, 0.9);
+  --color-blue-purple-30: rgba(84, 96, 230, 0.3);
+
+   /*layout*/
+  --radius-box-navy-blue: 25px;
+  --radius-box-image: 30px;
+  --radius-weather-capsule: 10px;
+  --radius-location-button: 10px;
+  --radius-moon-button: 10px;
+
+  /*typography - font families */
+  --font-family-montserrat: 'Montserrat', sans-serif;
+
+   /*typography - font sizes */
+  --font-size-50: 50px;
+  --font-size-40: 40px;
+  --font-size-30: 30px;
+  --font-size-28: 28px;
+  --font-size-24: 24px;
+  --font-size-20: 20px;
+  --font-size-15: 15px;
+
+  /*layout */
+  --layout-spacing-small: 8px;
+  --layout-spacing-medium: 16px;
+  --layout-spacing-large: 24px;
+  --layout-spacing-xlarge: 32px;
+  --layout-max-width: 1200px;
+  --layout-header-height: 60px;
+  --layout-footer-height: 50px;
+}
+
+body {
+    background-color
+}
