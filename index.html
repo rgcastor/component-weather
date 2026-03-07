@@ -5,16 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Component</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/token.css">
 </head>
 <body>
-    <header>
-        <h1>Weather Component</h1>
-    </header>
-    <main>
-        <!-- Main content will go here -->
-    </main>
-    <footer>
-        <p>&copy; 2026 Weather App</p>
-    </footer>
+    <div class="weather-widget">
+        <div class="weather-left">
+            <div class="weather-date">
+                <h2>Monday</h2>
+                <p>20 Jun 2022</p>
+            </div>
+            <div class="weather-image">
+                <img src="img/sunny-icon.png" alt="Sunny">
+            </div>
+            <div class="weather-temp">
+                <h1>29 °C</h1>
+                <p>Sunny</p>
+            </div>
+        </div>
+        <div class="weather-right">
+            <div class="weather-details">
+                <p>PRECIPITATION <span>0%</span></p>
+                <p>HUMIDITY <span>42%</span></p>
+                <p>WIND <span>3 km/h</span></p>
+            </div>
+            <div class="weather-forecast">
+                <div class="forecast-day">
+                    <img src="img/sunny-icon.png" alt="Sunny">
+                    <p>Tue</p>
+                    <p>30 °C</p>
+                </div>
+                <div class="forecast-day">
+                    <img src="img/cloudy-icon.png" alt="Cloudy">
+                    <p>Wed</p>
+                    <p>22 °C</p>
+                </div>
+                <div class="forecast-day">
+                    <img src="img/rainy-icon.png" alt="Rainy">
+                    <p>Thu</p>
+                    <p>16 °C</p>
+                </div>
+                <div class="forecast-day">
+                    <img src="img/sunny-icon.png" alt="Sunny">
+                    <p>Fri</p>
+                    <p>26 °C</p>
+                </div>
+            </div>
+            <div class="weather-location">
+                <button class="location-button">
+                    <img src="img/location-icon.png" alt="Location">
+                    New York City
+                </button>
+            </div>
+            <div class="weather-moon">
+                <div class="moon-phase">
+                    <img src="img/moon-icon.png" alt="Moon">
+                </div>
+                <div class="moon-details">
+                    <p>MOON ILLUMINATION <span>87%</span></p>
+                    <p>MOONRISE <span>9:32 PM</span></p>
+                    <p>NEXT FULL MOON <span>26 Days</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

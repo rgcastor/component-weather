@@ -3,4 +3,8 @@ body {
     font-size: var(--regular-text);
     background-color: var(--app-background-color);
     color: var(--primary-text-color);
+
+    .panel {
+        
+    }
 }
