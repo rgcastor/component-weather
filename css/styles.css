@@ -184,7 +184,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 0;
+    padding: 20px 0;
     color: #222831;
 }
 
@@ -381,7 +381,6 @@ body {
 .forecast-day {
     text-align: center;
     font-size: 16px;
-    background-color: #444;
     border-radius: 10px;
     padding: 10px;
     width: 60px;
