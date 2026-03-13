@@ -1,10 +1,406 @@
-body {
-    font-family: var(--font-family-montserrat);
-    font-size: var(--regular-text);
-    background-color: var(--app-background-color);
-    color: var(--primary-text-color);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    .panel {
-        
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-card {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    background-color: #222831;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* LEFT SECTION */
+.left-section {
+    flex: 0 0 45%;
+    background: linear-gradient(143deg, rgba(239, 136, 222, 0.95) 0%, rgba(83, 91, 230, 0.95) 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 32px;
+}
+
+.left-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/nyc photo.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.left-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 237px;
+    color: white;
+    text-align: left;
+    width: 100%;
+}
+
+.date-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.day-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.date-text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+.current-weather {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    align-items: flex-start;
+}
+
+.sun-icon {
+    width: 95px;
+    height: 95px;
+    color: white;
+}
+
+.temp-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.temperature {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.condition {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* RIGHT SECTION */
+.right-section {
+    flex: 0 0 55%;
+    background-color: #222831;
+    color: white;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-details {
+    width: 100%;
+    max-width: 415px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 20px;
+}
+
+.detail-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    border-bottom: none;
+}
+
+.detail-label {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: right;
+    min-width: 68px;
+}
+
+/* FORECAST CARDS */
+.forecast-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    padding: 0 20px;
+}
+
+.forecast-card {
+    width: 104px;
+    height: 168px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    box-shadow: 1px 2px 4px rgba(34, 40, 49, 0.3);
+    color: #222831;
+}
+
+.forecast-card.dark {
+    background-color: #272e37;
+    color: white;
+}
+
+.forecast-icon {
+    width: 55px;
+    height: 55px;
+    color: currentColor;
+    flex: 0 0 auto;
+}
+
+.forecast-day {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.forecast-temp {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* LOCATION BUTTON */
+.location-btn {
+    background: linear-gradient(96deg, rgba(239, 136, 222, 0.95) 0.2%, rgba(84, 96, 230, 0.95) 100%);
+    border-radius: 10px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    max-width: 415px;
+    height: 53px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.location-btn:hover {
+    transform: scale(1.02);
+}
+
+.location-icon {
+    width: 33px;
+    height: 33px;
+}
+
+/* MOON INFO CARD */
+.moon-card {
+    background-color: rgba(84, 96, 230, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 424px;
+    min-height: 141px;
+}
+
+.moon-image {
+    width: 98px;
+    height: 98px;
+    flex-shrink: 0;
+}
+
+.moon-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    font-size: 15px;
+}
+
+.moon-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.moon-label {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.moon-value {
+    font-weight: 400;
+    font-size: 15px;
+    text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-card {
+        flex-direction: column;
+        height: auto;
     }
+
+    .left-section,
+    .right-section {
+        flex: 1 1 auto;
+    }
+
+    body {
+        min-height: auto;
+    }
+}
+
+.weather-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #2C2C3E;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 800px;
+    color: #FFFFFF;
+}
+
+.weather-main {
+    flex: 1;
+    background: linear-gradient(to bottom, rgba(128, 90, 213, 0.8), rgba(255, 255, 255, 0.1)), url('../img/beach.jpg') no-repeat center center/cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+.weather-date {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.weather-date span {
+    font-size: 16px;
+    color: #D3D3D3;
+}
+
+.weather-info {
+    text-align: center;
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.condition {
+    font-size: 24px;
+    color: #D3D3D3;
+}
+
+.weather-details {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.details-section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    border-bottom: 1px solid #444;
+    padding: 10px 0;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.forecast-day {
+    text-align: center;
+    font-size: 16px;
+    background-color: #444;
+    border-radius: 10px;
+    padding: 10px;
+    width: 60px;
+}
+
+.location {
+    text-align: center;
+    background: linear-gradient(to right, #FF7EB3, #FF758C);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.moon-info {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    font-size: 14px;
 }
